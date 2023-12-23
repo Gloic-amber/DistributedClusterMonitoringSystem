@@ -1,0 +1,13 @@
+client:
+  serverPort: 8082
+  serverIP: 127.0.0.1
+server:
+  port: 8083
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://192.168.111.128:3306/DCMS?serverTimezone=Asia/Shanghai
+      username: root
+      password: 123
+      driver-class-name: com.mysql.cj.jdbc.Driver

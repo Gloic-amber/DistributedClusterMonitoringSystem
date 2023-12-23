@@ -1,0 +1,18 @@
+serverPort: 8082
+server:
+  port: 8081
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://192.168.111.128:3306/DCMS?serverTimezone=Asia/Shanghai
+      username: root
+      password: 123
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:  # setting配置
+    auto-mapping-behavior: full
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  type-aliases-package: org.ustc.common.pojo # 配置别名
