@@ -44,6 +44,12 @@ public class RecordServiceImpl implements RecordService {
     }
 
     @Override
+    public void saveClient(Client client) {
+        clients.getClients().put(client.getName(), client);
+        recordMapper.saveClient(client);
+    }
+
+    @Override
     public List<Report> getRecordByName(String name) {
         return recordMapper.getRecordByName(name);
     }
@@ -52,5 +58,15 @@ public class RecordServiceImpl implements RecordService {
     public void deleteRecordByName(String name) {
         clients.getClients().remove(name);
         recordMapper.deleteRecordByName(name);
+    }
+
+    @Override
+    public void deleteClientByName(String name) {
+        recordMapper.deleteClientByName(name);
+    }
+
+    @Override
+    public void updateClientByName(Client client) {
+        recordMapper.updateClientByName(client);
     }
 }

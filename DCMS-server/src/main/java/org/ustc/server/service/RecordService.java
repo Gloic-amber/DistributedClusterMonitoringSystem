@@ -34,7 +34,13 @@ public interface RecordService {
 
     void saveRecord(Report record);
 
+    void saveClient(Client client);
+
     List<Report> getRecordByName(String name);
 
     void deleteRecordByName(String name);
+
+    void deleteClientByName(String name);
+
+    void updateClientByName(Client client);
 }

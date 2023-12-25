@@ -12,5 +12,7 @@ package org.ustc.common.pojo;
 public enum Status {
 
     CLIENT_ONLINE,
-    CLIENT_REPORT;
+    CLIENT_REPORT,
+
+    CLIENT_OFFLINE
 }
