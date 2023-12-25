@@ -4,10 +4,7 @@ import com.alibaba.fastjson.JSON;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.ustc.common.pojo.Client;
 import org.ustc.common.pojo.Report;
 import org.ustc.server.service.RecordService;
@@ -27,6 +24,7 @@ import java.util.List;
 
 @Slf4j
 @Controller
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClientController {
 
     @Resource

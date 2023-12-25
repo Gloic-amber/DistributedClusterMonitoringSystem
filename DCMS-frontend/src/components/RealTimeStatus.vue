@@ -3,7 +3,7 @@
     :data="tableData"
     style="width: 100%">
     <el-table-column
-      prop="iP"
+      prop="ip"
       label="IP"
       width="180">
     </el-table-column>
@@ -13,7 +13,7 @@
       width="180">
     </el-table-column>
     <el-table-column
-      prop="cpu"
+      prop="cpuNum"
       label="CPU核数"
       width="180">
     </el-table-column>

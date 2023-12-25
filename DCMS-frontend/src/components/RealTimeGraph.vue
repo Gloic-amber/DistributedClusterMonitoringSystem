@@ -39,13 +39,13 @@ export default {
           let name = res.data[i].name
           if (!nameList.hasOwnProperty(name)) {
             nameList[name] = {
-              "avgload": [],
-              "timestamp": []
+              "load": [],
+              "timeStamp": []
             };
           }
-          nameList[name]["avgload"].push(res.data[i].avgload);
-          let time = (new Date(res.data[i].timestamp)).Format("yyyy-MM-dd hh:mm:ss");
-          nameList[name]["timestamp"].push(time);
+          nameList[name]["load"].push(res.data[i].load);
+          let time = (new Date(res.data[i].timeStamp)).Format("yyyy-MM-dd hh:mm:ss");
+          nameList[name]["timeStamp"].push(time);
         }
         console.log(nameList);
         for (let key in nameList) {
@@ -53,25 +53,25 @@ export default {
         }
         this.$nextTick(function () {
           for (let key in nameList)
-            this.drawLine(key, nameList[key]["timestamp"], nameList[key]["avgload"]);
+            this.drawLine(key, nameList[key]["timeStamp"], nameList[key]["load"]);
         })
       });
     }, 1000);
   },
   methods: {
-    drawLine(name, timestamp, avgload) {
+    drawLine(name, timeStamp, load) {
       var myChart = echarts.init(document.getElementById(name));
       var option = {
         title: {
           text: name + " 系统实时负载"
         },
         xAxis: {
-          data: timestamp
+          data: timeStamp
         },
         yAxis: {
         },
         series: [{
-          data: avgload,
+          data: load,
           type: 'line'
         }]
       };

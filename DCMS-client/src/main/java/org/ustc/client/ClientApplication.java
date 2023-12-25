@@ -105,7 +105,18 @@ public class ClientApplication implements CommandLineRunner {
             }
         };
         Timer timer = new Timer();
-        timer.schedule(timerTask, 0, 1000);
+        timer.schedule(timerTask, 0, 5000);
+
+        // 设置在关闭程序时关闭输出流
+        Runtime.getRuntime().addShutdownHook(new Thread() {
+            public void run() {
+                try {
+                    reportWriter.close(); // 关闭输出流
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     public static void main(String[] args) {

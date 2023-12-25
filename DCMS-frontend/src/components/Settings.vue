@@ -7,7 +7,7 @@
         <el-input v-model="ruleForm.name"></el-input>
       </el-form-item>
       <el-form-item label="CPU核数" prop="cpu">
-        <el-input v-model="ruleForm.cpu"></el-input>
+        <el-input v-model="ruleForm.cpuNum"></el-input>
       </el-form-item>
       <el-form-item label="操作系统" prop="os">
         <el-select v-model="ruleForm.os" placeholder="请选择操作系统">
@@ -32,7 +32,7 @@ export default {
       ruleForm: {
         ip: '',
         name: '',
-        cpu: '',
+        cpuNum: '',
         os: '',
       },
       rules: {
@@ -44,7 +44,7 @@ export default {
           {required: true, message: '请输入客户端名称', trigger: 'blur'},
           {pattern: '^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8}$', message: '长度为8个字符', trigger: 'blur'}
         ],
-        cpu: [
+        cpuNum: [
           {required: true, message: '请输入CPU核数', trigger: 'blur'},
           {pattern: '^[1-9]\\d*$', message: '请输入数字', trigger: 'blur'}
         ],

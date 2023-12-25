@@ -1,6 +1,7 @@
 package org.ustc.server.netty;
 
 import com.alibaba.fastjson.JSON;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import jakarta.annotation.Resource;
@@ -23,6 +24,7 @@ import org.ustc.server.service.RecordService;
  */
 
 @Slf4j
+@ChannelHandler.Sharable // 由于MyServerHandler被spring管理，只有一个实例，因此添加Sharable注解
 @Component
 public class MyServerHandler extends ChannelInboundHandlerAdapter {
 
