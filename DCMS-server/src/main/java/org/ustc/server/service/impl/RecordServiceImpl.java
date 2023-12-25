@@ -50,6 +50,7 @@ public class RecordServiceImpl implements RecordService {
 
     @Override
     public void deleteRecordByName(String name) {
+        clients.getClients().remove(name);
         recordMapper.deleteRecordByName(name);
     }
 }

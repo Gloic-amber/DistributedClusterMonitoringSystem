@@ -40,7 +40,7 @@ public class ClientController {
     public void saveClient(@RequestBody Client client){
         client.setOnline(true);
         recordService.clients.getClients().put(client.getName(), client);
-        //TODO: 开辟新线程运行client代码
+        //TODO: 开辟新线程启动一个新的客户端
     }
 
     @PostMapping("/editClient")
@@ -52,7 +52,6 @@ public class ClientController {
     @PostMapping("/deleteClient")
     public void deleteClient(@RequestBody Client client){
         String name = client.getName();
-        recordService.clients.getClients().remove(name);
         recordService.deleteRecordByName(name);
     }
 
