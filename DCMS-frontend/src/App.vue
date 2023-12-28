@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <el-row style="background-color: #409EFF; color: #333; line-height: 60px;">
+    <el-row style="background-color: #409E44; color: #333; line-height: 60px;">
       <el-col :span="20">
-        <i style="margin-left: 20px;color: #eeeeee; font-size: 25px" class="el-icon-s-opportunity"></i>
-        <span style="font-size: 25px; color: #eeeeee">分布式机群监管系统</span>
+        <i style="margin-left: 20px;color: #aaaaaa; font-size: 25px" class="el-icon-s-opportunity"></i>
+        <span style="font-size: 25px; color: #ffffff">分布式机群监管系统</span>
       </el-col>
       <el-col :span="4" align="right">
         <i class="el-icon-setting" style="margin-right: 10px; color: #eeeeee; font-size: 20px;vertical-align: middle;"></i>
-        <el-avatar style="vertical-align: middle; margin-right: 8px;"  src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"></el-avatar>
-        <span style="vertical-align: middle; color: #eeeeee; margin-right: 20px">Admin</span>
+        <el-avatar style="vertical-align: middle; margin-right: 8px;"  src="./static/timeproxy.png"></el-avatar>
+        <span style="vertical-align: middle; color: #eeeeee; margin-right: 20px">小店新开</span>
       </el-col>
     </el-row>
 

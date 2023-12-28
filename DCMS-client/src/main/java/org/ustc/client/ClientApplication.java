@@ -169,6 +169,7 @@ public class ClientApplication implements CommandLineRunner {
                         }
                     });
 
+
             ChannelFuture channelFuture = bootstrap.connect(serverIP, serverPort).sync();
             channelFuture.channel().closeFuture().sync();
         } finally {

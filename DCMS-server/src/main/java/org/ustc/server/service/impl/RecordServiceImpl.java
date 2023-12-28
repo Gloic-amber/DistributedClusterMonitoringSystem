@@ -68,5 +68,7 @@ public class RecordServiceImpl implements RecordService {
     @Override
     public void updateClientByName(Client client) {
         recordMapper.updateClientByName(client);
+        // 更新内存中的client
+        clients.getClients().put(client.getName(), client);
     }
 }

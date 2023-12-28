@@ -7,7 +7,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      url: jdbc:mysql://192.168.111.128:3306/DCMS?serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://192.168.116.128:3306/zsdb?serverTimezone=Asia/Shanghai
       username: root
       password: 123
       driver-class-name: com.mysql.cj.jdbc.Driver
