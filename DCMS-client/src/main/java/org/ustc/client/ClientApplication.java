@@ -130,7 +130,7 @@ public class ClientApplication implements CommandLineRunner {
                 }
             }
         };
-        TimerManager.getInstance().schedule(timerTask, 0, 5000);
+        TimerManager.getInstance().schedule(timerTask, 0, 3000);
 
         // 设置在关闭程序时向服务器发送下线的信息，然后关闭输出流
         Runtime.getRuntime().addShutdownHook(new Thread() {
